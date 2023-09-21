@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'media',
+      };
+    </script>
   </head>
-  <body>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-
-<div class="container">
-  <input type="text" placeholder="Escribe tu comentario..." id="inputComentario">
-  <button type="button" id="comentar">Comentar</button>
-</div>
-<div class="container" id="comentarios">
-
-</div>
+  <body class="dark:bg-[#222] flex flex-col gap-4">
+    <main class="m-auto max-w-4xl flex flex-col gap-4">
+      <div class="flex flex-col dark:text-white" id="comentarios">
+        <h2 class="text-2xl mb-4">Comentarios:</h2>
+      </div>
+      <div class="flex gap-4">
+        <input
+          class="w-full p-2 rounded-lg border border-blue-300 dark:border-gray-700 dark:bg-[#444] dark:text-white"
+          type="text"
+          placeholder="Escribe tu comentario..."
+          id="inputComentario"
+        />
+        <button
+          class="bg-indigo-500 hover:bg-indigo-300 text-white px-4 py-2 rounded-lg"
+          type="button"
+          id="comentar"
+        >
+          Comentar
+        </button>
+      </div>
+    </main>
     <script type="module" src="script.js"></script>
   </body>
 </html>

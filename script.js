@@ -10,7 +10,7 @@ function agregarComentario() {
   // const comentario = inputComentario.value;
   const comentario = Dompurify.sanitize(inputComentario.value);
   cajita.innerHTML += `
-  <article class="border-2 border-[#333] p-2 flex gap-4">
+  <article class=" p-2 flex gap-4">
   <div>
   <img class="max-w-[16rem] rounded-full" src="https://picsum.photos/50" alt="imagen de perfil" class="rounded-full">
   </div>
@@ -19,6 +19,7 @@ function agregarComentario() {
   <p>${comentario}</p>
   </div>
   </article>
+  <hr class="mx-2"/>
   `;
   inputComentario.value = '';
 }
